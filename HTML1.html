@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Page Title</title>
+
+    <link rel="stylesheet" type="text/css" href="CSS.css">
+    <script src="JavaScript.js"></script>
+
+</head>
+<body>
+
+    <div class="header">
+      <div class="clear">
+        <button id="theClearButton" onclick="Clear()">Clear</button>
+      </div>
+      <div id="date"></div>  
+      <h1>My To-Do</h1>
+    </div>
+
+    <div class="row">
+            <div id="add-item" class="column side">
+              <h2>Lists</h2>
+              <input type="text" id="theADDfunction" placeholder="New Task...">
+              <span onclick="newTask()" class="addButton">Add</span>
+            </div>
+            
+            <div class="column main">
+              <h2>Tasks</h2>
+              <ul id="List">
+                <li class="item">
+                  <i class="fa fa-circle-yhin complete"></i>
+                  <p class="text">ijkhcg</p>
+                  <i class="fa fa-trash-o delete"></i>
+              </ul>
+            </div>
+            
+          </div>
+
+
+</body>
+</html>

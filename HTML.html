@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Page Title</title>
+
+    <link rel="stylesheet" type="text/css" href="CSS.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura">
+    <script src="JavaScript.js"></script>
+
+</head>
+<body>
+
+    <div class="header">
+      <div class="clear">
+        <button class="theClearButton" onclick="Clear()" style="font-family: Allura;">Clear</button>
+      </div>
+      <div id="date"></div>  
+      <h1 style="color: #77212E; font-size:300%;"">My To-Do</h1>
+    </div>
+
+    <div class="row">
+            <div id="add-item" class="column side">
+              <h2 style="color:#77212E;">Add a new task...</h2>
+              <input type="text" id="theADDfunction" placeholder="New Task...">
+              <span onclick="newTask()" class="addButton">Add</span>
+            </div>
+            
+            <div class="column main">
+              <h2 style="color:#77212E;">Tasks</h2>
+              <ul id="myTasks"></ul>
+            </div>
+            
+          </div>
+
+
+</body>
+</html>
