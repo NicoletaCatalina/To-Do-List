@@ -1,32 +1,7 @@
-// Create a "close" button and append it to each list item
+// Variables
 var myNodelist = document.getElementsByTagName("li");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  console.log(txt.value);
-  myNodelist[i].appendChild(span);
-}
-
-// Click on a close button to hide the current list item
 var close = document.getElementsByClassName("close");
 var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
 
 function Clear() {
   var i;
@@ -40,8 +15,9 @@ function Clear() {
 function newTask() {
     var li = document.createElement("li");
     var inputValue = document.getElementById("theADDfunction").value;
-    console.log(document.getElementById("theADDfunction").value);
+    //console.log(document.getElementById("theADDfunction").value);
     var t = document.createTextNode(inputValue);
+    console.log(t);
 
     li.appendChild(t);
 
@@ -54,6 +30,7 @@ function newTask() {
 
     document.getElementById("theADDfunction").value = "";
     
+    //Add the close button
     var span = document.createElement("SPAN");
     var txt = document.createTextNode("\u00D7");
 
@@ -61,13 +38,37 @@ function newTask() {
     span.appendChild(txt);
     li.appendChild(span);
 
+    //Add the close button function
     for (i = 0; i < close.length; i++) {
       close[i].onclick = function() {
         var div = this.parentElement;
         div.style.display = "none";
       }
     }
+
+    //Add the checked mark
+    var list = document.querySelector('ul');
+    list.addEventListener('click', function(ev) {
+        if (ev.target.tagName === 'LI') {
+            ev.target.classList.toggle('checked');
+        }
+    }, false);
 }
+
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = dd + '/' + mm + '/' + yyyy;
+
+var date = document.createElement("P");
+var dateValue = document.createTextNode(today);
+date.appendChild(dateValue);
+document.getElementById("Date").appendChild(date);
+
+
+
 
 
 
