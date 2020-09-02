@@ -7,17 +7,17 @@
 
     <link rel="stylesheet" type="text/css" href="CSS.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura">
-    <script src="JavaScript.js"></script>
+    <script src="JavaScript.js" defer></script>
 
 </head>
 <body>
 
-    <div class="header">
+    <div id="header">
+      <div id="Date" class="TheDate"></div>
       <div class="clear">
         <button class="theClearButton" onclick="Clear()" style="font-family: Allura;">Clear</button>
-      </div>
-      <div id="date"></div>  
-      <h1 style="color: #77212E; font-size:300%;"">My To-Do</h1>
+      </div>  
+      <h1 style="color: white; font-size:300%;">My To-Do</h1>
     </div>
 
     <div class="row">
@@ -29,10 +29,11 @@
             
             <div class="column main">
               <h2 style="color:#77212E;">Tasks</h2>
-              <ul id="myTasks"></ul>
+              <ul id="myTasks">
+              </ul>
             </div>
             
-          </div>
+    </div>
 
 
 </body>
