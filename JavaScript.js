@@ -17,7 +17,7 @@ function newTask() {
     var inputValue = document.getElementById("theADDfunction").value;
     //console.log(document.getElementById("theADDfunction").value);
     var t = document.createTextNode(inputValue);
-    console.log(t);
+    //console.log(t);
 
     li.appendChild(t);
 
@@ -47,8 +47,7 @@ function newTask() {
     }
 
     //Add the checked mark
-    var list = document.querySelector('ul');
-    list.addEventListener('click', function(ev) {
+    li.addEventListener('click', function(ev) {
         if (ev.target.tagName === 'LI') {
             ev.target.classList.toggle('checked');
         }
